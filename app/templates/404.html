@@ -1,0 +1,15 @@
+
+{% extends "layout.html" %}
+
+{% block page_title %}Page Not Found{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <div class="text-center">
+        <h1>404</h1>
+        <p>ttras disculpas: esa página no existe</p>
+        <p>¿Quiere volver al <a href="{{ url_for('public.home') }}">incio</a> en su lugar?</p>
+    </div>
+</div>
+{% endblock %}
+
