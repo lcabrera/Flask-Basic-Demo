@@ -61,6 +61,6 @@ manager.add_command('shell', Shell(make_context=make_shell_context))
 
 if __name__ == '__main__':
     print(colored('Arrancando...\n', 'yellow'))
-    manager.run(debug=True)
+    manager.run()
 
 # END
