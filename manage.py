@@ -53,11 +53,18 @@ def make_shell_context():
 #        print(colored('The SQL database has been deleted', 'green'))
 
 
+@manager.command
+def hello():
+    """Imprime 'hello' por pantalla."""
+    print('hello')
+
+
 manager.add_command('runserver', Server())
 manager.add_command('shell', Shell(make_context=make_shell_context))
 # manager.add_command('db', MigrateCommand)
 # manager.add_command("urls", ShowUrls())
 # manager.add_command("clean", Clean())
+
 
 if __name__ == '__main__':
     print(colored('Arrancando...\n', 'yellow'))
