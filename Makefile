@@ -15,13 +15,26 @@ env:
 	make deps
 
 deps:
-	pip install -r requirements.txt
+	# pip install -r requirements.txt
+	pip install -r requirements-dev.txt -U
+
+isort:
+	isort -rc
+
+pylint:
+	find . -name "*.py" -type f -exec pylint '{}' \;
 
 clean:
 	python manage.py clean
 
 lint:
 	flake8 --exclude=env .
+
+flake:
+	flake8 --doctests  --exclude=env .
+
+doctest:
+	pydocstyle --explain .
 
 test:
 	py.test tests
