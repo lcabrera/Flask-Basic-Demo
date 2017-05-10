@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Personal
+# ~~~~~~~~
+dev-requirements.txt
+prod-requirements.txt
+
